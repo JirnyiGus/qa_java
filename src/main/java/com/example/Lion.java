@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Lion {
 
-    boolean male;
-    Feline feline;
+   private boolean male;
+    private Feline feline;
 
 
     public Lion(String sex, Feline feline) throws IndexOutOfBoundsException {

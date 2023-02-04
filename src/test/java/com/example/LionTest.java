@@ -22,7 +22,7 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
         List<String> actualResult = lion.getFood();
-        assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);
+        assertEquals("Проверка списка еды неудачна", expectedResult, actualResult);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(1);
         int expectedResult = 1;
         int actualResult = lion.getKittens();
-        assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);
+        assertEquals("Проверка количества котят неудачна", expectedResult, actualResult);
     }
 
     @Test
@@ -39,21 +39,21 @@ public class LionTest {
         Lion lion = new Lion("Самец", feline);
         boolean expectedResult = true;
         boolean actualResult = lion.doesHaveMane();
-        assertEquals("Некорректный результат вызова метода", expectedResult, actualResult);
+        assertEquals("Проверка определения пола неудачна", expectedResult, actualResult);
     }
 
     @Test
     public void lionMaleTest() {
         Lion lion = new Lion("Самец", feline);
         boolean actualResult = lion.doesHaveMane();
-        assertTrue("Некорректое значение свойства", actualResult);
+        assertTrue("Некорректное значение свойства", actualResult);
     }
 
     @Test
     public void lionFemaleTest() {
         Lion lion = new Lion("Самка", feline);
         boolean actualResult = lion.doesHaveMane();
-        assertFalse("Некорректое значение свойства", actualResult);
+        assertFalse("Некорректное значение свойства", actualResult);
     }
 
     @Test(expected = Exception.class)
