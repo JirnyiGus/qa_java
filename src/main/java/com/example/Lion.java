@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Lion {
 
-   private boolean male;
+    private boolean male;
     private Feline feline;
 
 
